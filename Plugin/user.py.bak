@@ -1,0 +1,119 @@
+import alright as alr 
+import selenium
+#from goto import label as lbl
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys as kys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+import time
+import os
+import random
+import string
+import sys
+import logging
+import platformdirs
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import (
+    UnexpectedAlertPresentException,
+    NoSuchElementException,
+)
+from webdriver_manager.chrome import ChromeDriverManager
+
+from scapy.all import *
+msgr=alr.WhatsApp()
+fact=10
+xpatt="/html/body/div[1]/div/div/div[4]/div/div[2]/div[2]/div/div/div[13]/div/div/div/div[2]/div[2]/div[1]"
+c=1
+deel=5
+#//*[@id="side"]/span
+#driver=webdriver.Chrome()
+#flg=driver.get("https://web.whatsapp.com")
+#if flg==NULL:
+#   print("Site unreachable!")
+#    exit()
+#else:
+#msgg=msgr.get_last_message_received(query='')
+#msgu=msgr.fetch_all_unread_chats(limit=True, top=4)
+#msg=msgr.get_first_chat()
+#while c==1:
+#    if msg:
+#        print("Attack Found!!!!!!!")
+#    else:
+#        c=0
+#dv=webdriver.Chrome()
+#dv.get("https://web.whatsapp.com/")
+#while True:
+#    message_box = dv.find_element(By.XPATH,xpatt)
+#    last_message = message_box[-1].text
+#    if last_message == message:
+#        print("Attack Found!!!")
+#        break
+#os.system("net start npf")
+#def packet_callback(packet):
+#    print(packet.show())
+#sniff(prn=packet_callback, count=10)
+
+#try:
+ #           search_box = self.wait.until(
+  ##                 (By.XPATH, '//div[@id="side"]/div[1]/div/div/div/div')
+   #             )
+   #         )
+   #         search_box.click()
+    #        search_box.send_keys(Keys.ARROW_DOWN)
+     #       chat = self.browser.switch_to.active_element
+     #       time.sleep(1)
+     #       if ignore_pinned:
+     #           while True:
+     #               flag = False
+     #               for item in chat.find_elements(By.TAG_NAME, "span"):
+     #                   if "pinned" in item.get_attribute("innerHTML"):
+     #                       flag = True
+     #                       break
+     #               if not flag:
+      #                  break
+      #              chat.send_keys(Keys.ARROW_DOWN)
+      #              chat = self.browser.switch_to.active_element#
+
+          #  name = chat.text.split("\n")[0]
+          
+#vall=random.choices(string.ascii_uppercase + string.ascii_lowercase, k=5)
+#if msgr.get_last_message_received==vall:
+ ##  time.sleep(10)
+ class WhatsApp(object):
+    def __init__(self, browser=None, time_out=600):
+        # CJM - 20220419: Added time_out=600 to allow the call with less than 600 sec timeout
+        # web.open(f"https://web.whatsapp.com/send?phone={phone_no}&text={quote(message)}")
+
+        self.BASE_URL = "https://web.whatsapp.com/"
+        self.suffix_link = "https://web.whatsapp.com/send?phone={mobile}&text&type=phone_number&app_absent=1"
+
+        if not browser:
+            browser = webdriver.Chrome(
+                ChromeDriverManager().install(),
+                options=self.chrome_options,
+            )
+
+            handles = browser.window_handles
+            for _, handle in enumerate(handles):
+                if handle != browser.current_window_handle:
+                    browser.switch_to.window(handle)
+                    browser.close()
+
+        self.browser = browser
+        # CJM - 20220419: Added time_out=600 to allow the call with less than 600 sec timeout
+        self.wait = WebDriverWait(self.browser, time_out)
+list_of_messages = self.wait.until(
+    EC.presence_of_all_elements_located(
+        By.XPATH,
+            '//div[@id="main"]/div[3]/div[1]/div[2]/div[3]/child::div[contains(@class,"message-in")]',
+            )
+        )
+#if list_of_messages

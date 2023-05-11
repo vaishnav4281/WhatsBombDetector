@@ -1,0 +1,35 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+# Load the WhatsApp Web page
+driver = webdriver.Chrome()
+driver.get("https://web.whatsapp.com/")
+
+# Wait for the user to log in and scan the QR code
+input("Scan the QR code and press Enter to continue...")
+
+# Locate the message input field and add a keydown event listener to it
+message_input = driver.find_element_by_css_selector("div._2_1wd[data-tab='6']")
+
+message_input.send_keys(Keys.CONTROL + "a")
+message_input.send_keys(Keys.DELETE)
+
+# Define a function to check for bomb messages
+def is_bomb_message(message):
+    # Your code to check for bomb messages here
+    # Return True if message is a bomb message, False otherwise
+    return False
+
+# Define a function to send a message and prevent bomb messages
+def send_message(message):
+    if is_bomb_message(message):
+        # Display a warning message or prevent sending the bomb message
+        print("Warning: This message may be a bomb message and cannot be sent.")
+    else:
+        # Send the message as normal
+        message_input.send_keys(message)
+        message_input.send_keys(Keys.RETURN)
+
+# Example usage of the send_message function
+send_message("Hello, how are you?")
+

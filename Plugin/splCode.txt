@@ -1,0 +1,41 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+# Load the WhatsApp Web page
+driver = webdriver.Chrome()
+driver.get("https://web.whatsapp.com/")
+
+# Wait for the user to log in and scan the QR code
+input("Scan the QR code and press Enter to continue...")
+
+# Define a function to block a user
+def block_user(name):
+    # Click the new chat button
+    new_chat_button = driver.find_element_by_css_selector("div._3qx7_")
+    new_chat_button.click()
+
+    # Search for the user by name
+    search_input = driver.find_element_by_css_selector("div._2_1wd.copyable-text.selectable-text")
+    search_input.send_keys(name)
+    time.sleep(2)  # Wait for search results to load
+
+    # Click the user's name to open the chat
+    user_name_element = driver.find_element_by_xpath(f"//span[@title='{name}']")
+    user_name_element.click()
+
+    # Click the three-dot menu button
+    menu_button = driver.find_element_by_css_selector("div._1hI5g._1XH7x._1VzZY")
+    menu_button.click()
+
+    # Click the Block button
+    block_button = driver.find_element_by_css_selector("div._3CFKj:nth-child(3)")
+    block_button.click()
+
+    # Confirm the block action
+    confirm_button = driver.find_element_by_css_selector("div._3CFKj._3TV3J")
+    confirm_button.click()
+
+# Example usage of the block_user function
+block_user("John Smith")
+

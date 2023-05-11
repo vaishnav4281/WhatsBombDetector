@@ -1,0 +1,7 @@
+selenium
+os-sys
+alright
+pandas
+requests
+apscheduler
+datetime

@@ -1,0 +1,9 @@
+{
+
+  "manifest_version": 2,
+  "name": "WhatsPlug",
+  "version": "1.0",
+
+  "description": "Whatsapp plugin for detecting, blocking and reporting whatsapp bomb messages."
+}
+

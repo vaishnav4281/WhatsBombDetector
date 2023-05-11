@@ -1,0 +1,20 @@
+Whatsapp Automate: 
+https://towardsdatascience.com/automate-whatsapp-messages-with-python-in-3-steps-d64cf0de4539
+
+Youwsup: 
+https://github.com/tgalal/yowsup/wiki/#Installation
+
+PyWhatsapp: 
+https://github.com/shauryauppal/PyWhatsapp
+
+Extension/Plugin: 
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+
+Plugin-Drive: 
+https://drive.google.com/drive/folders/1Jc4jVjBziFdkYtGt0MBainY8AP8W7PNc
+
+Detection System:
+https://stackoverflow.com/questions/65299796/how-do-i-read-whatsapp-messages-from-a-contact-using-python
+
+WhatsappWeb Lib:
+https://pypi.org/project/whatsapp-web/
