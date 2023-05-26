@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Output Example</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById('output');
+    const socket = new WebSocket('ws://localhost:8080'); // Replace with your server address
+
+    socket.onmessage = function(event) {
+      const data = event.data;
+      outputDiv.innerText += data + '\n';
+    };
+  </script>
+</body>
+</html>
