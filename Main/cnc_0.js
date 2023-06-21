@@ -58,6 +58,9 @@ const atkr=message.from.replace('@c.us','');
 const atkrr=message.from;
 const contact=await message.getContact();
 const usrnum=num+'@c.us';
+const user = await client.getNumberId(num);	//await
+const chatId = user._serialized;
+const chat= await message.getChat();
 msg=message.body;
 //const number=atkr;
 	//while(msg==true){
@@ -70,13 +73,14 @@ for(i=0;i<=fact;i++)
 		console.log('\nAttackFound!!!');
 		console.log('User Number: '+num);
 		console.log('Attacker Number: '+atkr);
-		client.sendMessage(usrnum, "Hey, the number "+atkr+" tried to Attack you!");
+		client.sendMessage(chatId, "Hey, the number "+atkr+" tried to Attack you!");
 		//if(atkr==='number@s.whatsapp.net')
 		//{
 		//const chat=await message.getChat();
 			//chat.contact.block();
 		await contact.block(atkrr);
 		console.log("Contact "+atkr+" blocked Succesfully!!\n");
+		client.sendMessage(chatId,"Attacker Blocked Succesfully!");
 		c=0;
 		break;
 	
