@@ -1,6 +1,6 @@
 # WhatsBombDetector 📱💣
 
-**WhatsBombDetector** is an AI-powered system designed to detect and prevent the mass spamming of messages on WhatsApp groups, which can lead to overloads or "bombing." The solution aims to identify potential spam messages or bomb threats that could disrupt the user experience.
+**WhatsBombDetector** is a Node JS based system used to detect and prevent the mass spamming of messages on WhatsApp groups, which can lead to overloads or "bombing." The solution aims to identify potential spam messages or bomb threats that could disrupt the user experience.
 
 This project was developed to address the growing concern of cyberbullying, spamming, and misuse of messaging platforms like WhatsApp by malicious entities who can exploit these platforms for mass messaging attacks.
 
