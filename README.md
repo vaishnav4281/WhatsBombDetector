@@ -14,9 +14,6 @@ This project was developed to address the growing concern of cyberbullying, spam
   
 ---
 
-
----
-
 ## 🛠️ Setup & Installation
 
 To set up **WhatsBombDetector** on your system, follow these steps:
@@ -32,8 +29,12 @@ To set up **WhatsBombDetector** on your system, follow these steps:
 
 More details about the methodology, model architecture, and results can be found in the research paper IJNRD - [DDoS Attack Detection System for WhatsApp](https://ijnrd.org/papers/IJNRD2306421.pdf). The paper explores various algorithms, to identify the most effective technique for spam detection in WhatsApp environments.
 
+---
+
 ## 🤝 Contributing
 Contributions are welcome! If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with your enhancements or bug fixes. Ensure to follow coding best practices.
+
+---
 
 ## 📧 Contact
 For any inquiries or support, please contact the project maintainer via GitHub Issues or email at arpitramesan777@gmail.com.
