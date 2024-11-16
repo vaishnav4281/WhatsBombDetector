@@ -23,7 +23,7 @@ To set up **WhatsBombDetector** on your system, follow these steps:
    git clone https://github.com/ArkTrek/WhatsBombDetector.git
    cd WhatsBombDetector
 
----
+--
 
 ## 🔍 Research Paper
 
